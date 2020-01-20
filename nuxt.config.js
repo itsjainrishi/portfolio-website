@@ -62,11 +62,8 @@ export default {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.md$/,
-        include: path.resolve(__dirname, "contents/projects"),
+        include: path.resolve(__dirname, "content"),
         loader: "frontmatter-markdown-loader",
-        options: {
-          mode: [Mode.VUE_COMPONENT, Mode.META]
-        }
       });
     }
   }

@@ -2,54 +2,15 @@
   <div class="container">
     <div class="main">
       <section class="jobs__container">
-        <div class="job__wrapper columns is-desktop">
+        <div v-for="job in jobs" class="job__wrapper columns is-desktop">
           <div class="job__title column is-3">
             <h2 class="title">
-              Technical-Intern @Synopsys
+              {{ job.attributes.title }} @ {{ job.attributes.company }}
             </h2>
           </div>
           <div class="job__description column">
-            <p>January 2018 - January 2019</p>
-            <ul>
-              <li>
-                Automate LVS Tests deployment on Sun Grid Engine for Samsung and
-                Global Foundry Projects and to have them run in the shortest
-                possible time.
-              </li>
-              <li>
-                Automate Analysis of Test Results to generate a concise report.
-              </li>
-              <li>
-                Automated patching of Design Rules based on user input file.
-              </li>
-              <li>
-                Programming in Python, Perl and Tcl in Unix environment.
-              </li>
-              <li>
-                Workd with Distributed Systems
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="job__wrapper columns is-desktop">
-          <div class="job__title column is-3">
-            <h2 class="title">
-              Intern @Tnine
-            </h2>
-          </div>
-          <div class="job__description column">
-            <p>May 2016 - December 2016</p>
-            <ul>
-              <li>
-                Developed Backend for in-house apps and client projects.
-              </li>
-              <li>
-                Worked with Google and Facebook API's
-              </li>
-              <li>
-                Coding in Jquery, Laravel
-              </li>
-            </ul>
+            <p>{{ job.attributes.time }}</p>
+            <div v-html="job.content"></div>
           </div>
         </div>
       </section>
@@ -58,7 +19,25 @@
 </template>
 
 <script>
-export default {}
+import Jobs from '~/content/jobs/index'
+
+export default {
+  asyncData() {
+    async function asyncImport(job) {
+      const jobCont = await import(`~/content/jobs/${job}.md`)
+      return {
+        attributes: jobCont.attributes,
+        content: jobCont.html
+      }
+    }
+
+    return Promise.all(Jobs.map((job) => asyncImport(job))).then((res) => {
+      return {
+        jobs: res
+      }
+    })
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -2,19 +2,20 @@
   <div class="container">
     <div class="main">
       <li v-for="project in projects">
-        {{ project }}
+        {{ project.title }} <br />
+        {{ project.description }}
       </li>
     </div>
   </div>
 </template>
 
 <script>
-import Projects from '~/contents/projects/index'
+import Projects from '~/content/projects/index'
 
 export default {
   asyncData() {
     async function asyncImport(project) {
-      const wholeMD = await import(`~/contents/projects/${project}.md`)
+      const wholeMD = await import(`~/content/projects/${project}.md`)
       return wholeMD.attributes
     }
 
