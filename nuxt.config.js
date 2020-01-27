@@ -30,7 +30,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/lazysizes.client.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -43,8 +45,15 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    'nuxt-responsive-loader'
   ],
+  responsiveLoader: {
+    name: 'images/[name]-[width].[ext]',
+    sizes: [175, 350, 700, 1050, 1400, 3200],
+    adapter: require('responsive-loader/sharp'),
+    quality: 85
+  },
   /*
    ** Build configuration
    */
@@ -60,11 +69,14 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.md$/,
-        include: path.resolve(__dirname, "content"),
-        loader: "frontmatter-markdown-loader",
-      });
+      //add frontmatter-markdown-loader
+      config.module.rules.push(
+        {
+          test: /\.md$/,
+          include: path.resolve(__dirname, "content"),
+          loader: "frontmatter-markdown-loader",
+        }
+      )
     }
   }
 }

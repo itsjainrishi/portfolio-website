@@ -1,22 +1,31 @@
 <template>
-  <div class="container">
-    <div class="main">
-      <li v-for="project in projects">
-        {{ project.title }} <br />
-        {{ project.description }}
-      </li>
-    </div>
+  <div class="main">
+    <section class="projects-container is-flex">
+      <h3 class="heading">Some Things I have built</h3>
+      <div class="columns is-multiline">
+        <ProjectComponent
+          v-for="project in projects"
+          :item="project"
+          class="column is-5 is-offset-1"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Projects from '~/content/projects/index'
+import Projects from '@/content/projects'
+import ProjectComponent from '@/components/Project.vue'
 
 export default {
+  components: { ProjectComponent },
   asyncData() {
     async function asyncImport(project) {
-      const wholeMD = await import(`~/content/projects/${project}.md`)
-      return wholeMD.attributes
+      const projInfo = await import(`~/content/projects/${project}.md`)
+      return {
+        attributes: projInfo.attributes,
+        content: projInfo.html
+      }
     }
 
     return Promise.all(Projects.map((project) => asyncImport(project))).then(
@@ -31,26 +40,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 0 100px;
+.projects-container {
+  flex-direction: column;
+  position: relative;
 }
-.links {
-  padding-top: 15px;
-}
-.main {
-  width: 100%;
-  padding: 150px 0px;
 
-  .basic__info {
-    .content {
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+.columns {
+  margin: auto;
+}
+
+.column {
+  max-width: 40%;
+  &:nth-of-type(2n + 1) {
+    margin-left: 5.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    max-width: 100%;
+
+    &:nth-of-type(2n + 1) {
+      margin-left: 0;
     }
   }
 }
