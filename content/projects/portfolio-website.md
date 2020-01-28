@@ -2,7 +2,7 @@
 title: 'Portfolio Website'
 github: 'https://github.com/itsjainrishi/portfolio-website'
 external: ''
-image: 'portfolio.png'
+image: 'portfolio-website.png'
 tech:
   - Nuxt
   - Bulma

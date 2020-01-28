@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
-        <img src="~/assets/untitled.svg" width="70" />
+        <img src="~/assets/R.svg" width="70" />
       </nuxt-link>
 
       <a role="button" class="navbar-burger burger">

@@ -2,7 +2,7 @@
 title: 'Spotify Profile'
 github: 'https://github.com/itsjainrishi/spotify-profile'
 external: 'https://rishiislistening.herokuapp.com/'
-image: 'some.png'
+image: 'spotify-profile.png'
 tech:
   - Nuxt
   - Node.js
