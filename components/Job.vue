@@ -51,10 +51,6 @@ export default {
   margin-left: 30px;
   margin-bottom: 20px;
   clear: both;
-  animation-name: fadeInLeft;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: 200ms;
 }
 
 .timeline-box-inner {
