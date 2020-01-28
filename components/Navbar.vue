@@ -2,18 +2,22 @@
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
-        <img src="~/assets/R.svg" width="70" />
+        <img src="~/assets/R.svg" width="70" @click="closeNavbar" />
       </nuxt-link>
 
-      <a role="button" class="navbar-burger burger">
+      <a
+        :class="['navbar-burger', 'burger', { 'is-active': navbarActive }]"
+        @click="toggleNavbar"
+        role="button"
+      >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
 
-    <div class="navbar-menu">
-      <div class="navbar-end">
+    <div :class="['navbar-menu', { 'is-active': navbarActive }]">
+      <div @click="closeNavbar" class="navbar-end">
         <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
         <nuxt-link class="navbar-item" to="/experience">Experience</nuxt-link>
         <nuxt-link class="navbar-item" to="/work">Work</nuxt-link>
@@ -26,7 +30,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      navbarActive: false
+    }
+  },
+  methods: {
+    toggleNavbar() {
+      this.navbarActive = !this.navbarActive
+    },
+    closeNavbar() {
+      this.navbarActive = false
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -79,6 +97,13 @@ svg {
 .navbar-item {
   img {
     max-height: 40px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: rgb(10, 25, 47);
+    box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
   }
 }
 </style>

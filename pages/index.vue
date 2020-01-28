@@ -28,7 +28,11 @@
               <i class="icon-angellist"></i>
             </a>
           </div>
-          <a href="mailto:bejainrishi@gmail.com?Subject=Hello" target="_top">
+          <a
+            href="mailto:bejainrishi@gmail.com?Subject=Hello"
+            target="_top"
+            class="contact-btn"
+          >
             <button class="btn-mail">Contact</button>
           </a>
         </div>
@@ -168,15 +172,21 @@ img {
   color: rgb(168, 178, 209);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .title {
     font-size: 60px;
+  }
+  .contact-btn {
+    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 768px) {
   .avatar {
     margin: 60px auto 0;
+  }
+  .avatar-wrapper {
+    margin: auto;
   }
 }
 
