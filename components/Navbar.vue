@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
-      <nuxt-link class="navbar-item" to="/">
+      <nuxt-link class="navbar-item img" to="/">
         <img src="~/assets/R.svg" width="70" @click="closeNavbar" />
       </nuxt-link>
 
@@ -18,9 +18,11 @@
 
     <div :class="['navbar-menu', { 'is-active': navbarActive }]">
       <div @click="closeNavbar" class="navbar-end">
-        <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
-        <nuxt-link class="navbar-item" to="/experience">Experience</nuxt-link>
-        <nuxt-link class="navbar-item" to="/work">Work</nuxt-link>
+        <nuxt-link class="navbar-item about" to="/about">About</nuxt-link>
+        <nuxt-link class="navbar-item experience" to="/experience">
+          Experience
+        </nuxt-link>
+        <nuxt-link class="navbar-item work" to="/work">Work</nuxt-link>
         <a class="navbar-item resume" href="/Resume.pdf" download>
           <button class="btn-resume">Resume</button>
         </a>
@@ -62,9 +64,13 @@ a {
     color: rgb(100, 255, 218);
   }
 
-  &.resume:focus {
+  &.resume:hover,
+  &.resume:focus,
+  &.resume:focus-within,
+  &.resume:visited {
     background: transparent;
-    color: rgb(168, 178, 209);
+    color: rgb(100, 255, 218);
+    border: none;
   }
 }
 
@@ -75,6 +81,15 @@ a {
   background: transparent;
   border: 1px solid rgb(100, 255, 218);
   border-radius: 3px;
+
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:visited {
+    background: transparent;
+    color: rgb(100, 255, 218);
+    border: 1px solid rgb(100, 255, 218);
+  }
 }
 
 .navbar {
@@ -95,9 +110,23 @@ svg {
 }
 
 .navbar-item {
+  animation-name: fadeInTop;
+  animation-duration: 1s;
+  animation-fill-mode: both;
   img {
     max-height: 40px;
   }
+}
+.experience {
+  animation-delay: 100ms;
+}
+
+.work {
+  animation-delay: 250ms;
+}
+
+.resume {
+  animation-delay: 400ms;
 }
 
 @media screen and (max-width: 1023px) {

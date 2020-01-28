@@ -48,6 +48,10 @@ export default {
   position: relative;
   padding: 0;
   margin-bottom: 75px;
+  animation-name: fadeInBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 200ms;
 }
 
 .bar {

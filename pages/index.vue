@@ -66,6 +66,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+* {
+  animation-name: fadeInBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
 [class^='icon-'],
 [class*=' icon-'] {
   color: rgb(168, 178, 209);
@@ -95,6 +101,7 @@ export default {
 
 .social-icons {
   margin: 3rem 0;
+  animation-delay: 1000ms;
 
   a {
     margin-right: 16px;
@@ -129,6 +136,7 @@ export default {
   margin-left: 30px;
   text-align: center;
   max-width: 300px;
+  animation-delay: 700ms;
   .avatar {
     max-height: 300px;
     margin: auto;
@@ -146,6 +154,7 @@ img {
   background: transparent;
   border: 1px solid rgb(100, 255, 218);
   border-radius: 3px;
+  animation-delay: 1000ms;
 }
 
 .title {
@@ -156,6 +165,7 @@ img {
   font-size: 80px;
   color: rgb(100, 255, 218);
   letter-spacing: 1px;
+  animation-delay: 800ms;
 }
 
 .subtitle {
@@ -164,12 +174,14 @@ img {
   color: rgb(168, 178, 209);
   word-spacing: 5px;
   padding-bottom: 15px;
+  animation-delay: 700ms;
 }
 
 .description {
   width: 100%;
   max-width: 500px;
   color: rgb(168, 178, 209);
+  animation-delay: 900ms;
 }
 
 @media (max-width: 1023px) {

@@ -41,6 +41,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  animation-name: fadeInBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 200ms;
+}
 .is-flex {
   flex-direction: column;
 }
