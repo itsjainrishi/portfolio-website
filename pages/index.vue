@@ -15,16 +15,16 @@
             </p>
           </div>
           <div class="social-icons">
-            <a :href="hero.instagram">
+            <a :href="hero.instagram" aria-label="Instagram">
               <i class="icon-instagram"></i>
             </a>
-            <a :href="hero.github">
+            <a :href="hero.github" aria-label="Github">
               <i class="icon-github"></i>
             </a>
-            <a :href="hero.linkedin">
+            <a :href="hero.linkedin" aria-label="Linkedin">
               <i class="icon-linkedin"></i>
             </a>
-            <a :href="hero.angellist">
+            <a :href="hero.angellist" aria-label="Angellist">
               <i class="icon-angellist"></i>
             </a>
           </div>
