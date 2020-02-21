@@ -1,7 +1,7 @@
 ---
 title: 'Portfolio Website'
 github: 'https://github.com/itsjainrishi/portfolio-website'
-external: ''
+external: 'http://hire-rishijain.netlify.com/'
 image: 'portfolio-website.png'
 tech:
   - Nuxt
