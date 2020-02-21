@@ -19,6 +19,12 @@ export default {
     ],
     link: []
   },
+  pwa: {
+    icon: {
+     /* icon options */
+      iconFileName: 'pwa.png'
+    }
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -46,7 +52,8 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    'nuxt-responsive-loader'
+    'nuxt-responsive-loader',
+    '@nuxtjs/pwa'
   ],
   responsiveLoader: {
     name: 'images/[name]-[width].[ext]',
