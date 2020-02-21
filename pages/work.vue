@@ -4,9 +4,9 @@
       <h3 class="heading">Some Things I have built</h3>
       <div class="columns is-multiline">
         <project-component
-          v-for="(project, index) in projects"
+          v-for="project in projects"
           :item="project"
-          :key="index"
+          :key="project.title"
           class="column is-5 is-offset-1"
         />
       </div>
