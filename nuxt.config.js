@@ -14,7 +14,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || 'Rishi Jain is a software engineer with experience in Laravel, Jquery, Python, Perl and VueJS, who strives to build high quality websites and applications'
       }
     ],
     link: []

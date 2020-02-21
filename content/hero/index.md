@@ -1,7 +1,7 @@
 ---
 title: 'Hi, I am'
 name: 'Rishi Jain'
-description: 'A software engineer with experience in Laravel, Jquery, Python, Perl and VueJS that strives to build high quality websites and applications.'
+description: 'A software engineer with experience in Laravel, Jquery, Python, Perl and VueJS, who strives to build high quality websites and applications.'
 image: 'me.jpg'
 instagram: 'https://www.instagram.com/jainrishi09/'
 github: 'https://github.com/itsjainrishi/'
