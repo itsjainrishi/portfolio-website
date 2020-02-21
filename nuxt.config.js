@@ -53,7 +53,11 @@ export default {
     icon: {
      /* icon options */
       iconFileName: 'pwa.png'
-    }
+    },
+    manifest: {
+      name: 'Rishi Jain | Software Engineer',
+      short_name: 'Rishi Jain',
+    },
   },
   /*
    ** Customize the progress-bar color
