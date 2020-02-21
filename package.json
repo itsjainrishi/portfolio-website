@@ -1,11 +1,11 @@
 {
   "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "My portfolio",
+  "description": "My personal website",
   "author": "Rishi Jain",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec \"nuxt\"",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

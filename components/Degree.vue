@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <img src="~/assets/images/grad-cap.png" />
+      <img src="~/assets/images/grad-cap.png" alt="Btech" />
       <h4>{{ item.qualification }}</h4>
       <p>
         I completed my {{ item.qualification }} from

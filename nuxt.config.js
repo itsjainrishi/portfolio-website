@@ -7,14 +7,44 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Rishi Jain | Software Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Rishi Jain is a software engineer with experience in Laravel, Jquery, Python, Perl and VueJS, who strives to build high quality websites and applications'
+        content: 'Rishi Jain is a software engineer with experience in Laravel, Jquery, Python, Perl and VueJS, who strives to build high quality websites and applications.'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Rishi Jain, Rishi, Jain, itsjainrishi, software engineer, front-end engineer, web developer, javascript'
+      },
+      { hid: 'name', itemprop: 'name', content: 'Rishi Jain | Software Engineer' },
+      {
+        hid: 'description',
+        itemprop: 'description',
+        content:
+          'Rishi Jain is a software engineer who strives to build high quality websites and applications.'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Rishi Jain | Software Engineer'
+      },
+      { hid: 'og:url', property: 'og:url', content: 'https://hire-rishijain.netlify.com' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Rishi Jain | Software Engineer | Website'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Rishi Jain is a software engineer who strives to build high quality websites and applications.'
       }
     ],
     link: []

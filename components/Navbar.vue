@@ -2,12 +2,14 @@
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item img" to="/">
-        <img @click="closeNavbar" src="~/assets/R.svg" width="70" />
+        <img @click="closeNavbar" src="~/assets/R.svg" alt="R" width="70" />
       </nuxt-link>
 
       <a
         :class="['navbar-burger', 'burger', { 'is-active': navbarActive }]"
         @click="toggleNavbar"
+        aria-label="menu"
+        aria-expanded="false"
         role="button"
       >
         <span aria-hidden="true"></span>

@@ -45,6 +45,7 @@
               "
               class="lazyload"
               sizes="(max-width: 350px) 100vw, 350px"
+              alt="Rishi Jain"
             />
           </div>
         </div>

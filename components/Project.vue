@@ -10,6 +10,7 @@
         :data-srcset="
           require('~/assets/images/projects/' + item.attributes.image).srcSet
         "
+        :alt="item.attributes.title"
         class="lazyload"
         sizes="(max-width: 700px) 100vw, 700px"
       />
