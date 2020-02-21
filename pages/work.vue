@@ -3,9 +3,10 @@
     <section class="projects-container is-flex">
       <h3 class="heading">Some Things I have built</h3>
       <div class="columns is-multiline">
-        <ProjectComponent
-          v-for="project in projects"
+        <project-component
+          v-for="(project, index) in projects"
           :item="project"
+          :key="index"
           class="column is-5 is-offset-1"
         />
       </div>

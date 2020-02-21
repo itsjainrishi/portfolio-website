@@ -100,4 +100,14 @@ export default {
     }
   }
 }
+
+@media (max-width: 450px) {
+  .tech-wrapper {
+    ul {
+      list-style: none;
+      column-count: 1;
+      margin: auto;
+    }
+  }
+}
 </style>

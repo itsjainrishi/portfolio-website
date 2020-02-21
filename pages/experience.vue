@@ -4,7 +4,11 @@
       <h3 class="heading">Work Experience</h3>
       <div class="jobs-container">
         <div class="timeline">
-          <JobComponent v-for="job in jobs" :item="job" />
+          <job-component
+            v-for="(job, index) in jobs"
+            :item="job"
+            :key="index"
+          />
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item img" to="/">
-        <img src="~/assets/R.svg" width="70" @click="closeNavbar" />
+        <img @click="closeNavbar" src="~/assets/R.svg" width="70" />
       </nuxt-link>
 
       <a
@@ -100,6 +100,10 @@ a {
   box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
   background-color: rgb(10, 25, 47);
   z-index: 9999;
+}
+
+.navbar-burger {
+  height: 70px;
 }
 
 svg {

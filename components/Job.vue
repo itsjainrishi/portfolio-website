@@ -22,7 +22,8 @@ import Colors from '~/plugins/colors'
 export default {
   props: {
     item: {
-      type: Object
+      type: Object,
+      default: () => {}
     }
   },
   computed: {

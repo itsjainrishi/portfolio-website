@@ -22,10 +22,10 @@
         </li>
       </ul>
       <div class="link-wrapper">
-        <a class="link-github" :href="item.attributes.github">
+        <a :href="item.attributes.github" class="link-github">
           <i class="icon-github" />
         </a>
-        <a class="link-external" :href="item.attributes.external">
+        <a :href="item.attributes.external" class="link-external">
           <i class="icon-external" />
         </a>
       </div>
@@ -37,7 +37,8 @@
 export default {
   props: {
     item: {
-      type: Object
+      type: Object,
+      default: () => {}
     }
   }
 }
